@@ -1,0 +1,27 @@
+
+JSON y Go
+Una pareja casi perfecta
+Tags: JSON, un, baz
+
+Freddy Rondón
+Developer, Mercadolibre
+ifreddyrondon@gmail.com
+https://github.com/ifreddyrondon/
+@ifreddyrondon
+
+* Primeros pasos
+
+.image img/first-steps.jpg
+
+* Hello world
+
+Unmarshal
+.play firststeps/unmarshal.go /START/,/END/
+
+NewDecoder
+.play firststeps/decode.go /START/,/END/
+
+* Hello world
+
+Struct
+.play -edit struct/capture.go /START/,/END/
