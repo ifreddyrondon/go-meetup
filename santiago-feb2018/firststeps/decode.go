@@ -10,7 +10,7 @@ func main() {
 	// START OMIT
 	in := strings.NewReader(`{"hello": "world"}`)
 	var result map[string]interface{}
-	json.NewDecoder(in).Decode(&result)
+	json.NewDecoder(in).Decode(&result) // HL
 	fmt.Println(result)
 	// END OMIT
 }

@@ -24,4 +24,27 @@ NewDecoder
 * Hello world
 
 Struct
-.play -edit struct/capture.go /START/,/END/
+.play -edit firststeps/point.go /START/,/END/
+
+¿Cómo podríamos soportar *latitude* y *longitude* en conjunto con *lat* y *lng*?
+
+* Unmarshal
+
+.code -edit structs/point/point.go /START/,/END/
+
+* Unmarshal
+
+Caso base
+.play -edit structs/point_lat_lng.go /START/,/END/
+
+Caso latitude y longitude
+.play -edit structs/point_latitude_longitude.go /START/,/END/
+
+Caso mezclado
+.play -edit structs/point_lat_longitude.go /START/,/END/
+
+* Enjoy!
+
+.image img/GOPHER_MIC_DROP.png 500 _
+.caption Gopher by the amazing Ashley McNamara
+
