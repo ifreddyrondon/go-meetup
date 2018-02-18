@@ -43,6 +43,22 @@ Caso latitude y longitude
 Caso mezclado
 .play -edit structs/point_lat_longitude.go /START/,/END/
 
+* Working with dates
+
+.code -edit timestamp/timeutils/timestamp.go /START/,/END/
+
+* Examples
+
+RFC3339
+.play -edit timestamp/RFC3339date.go /START/,/END/
+
+RFC1123
+.play -edit timestamp/RFC1123timestamp.go /START/,/END/
+
+Unix timestamp
+.play -edit timestamp/UnixTimestamp.go /START/,/END/
+
+
 * Enjoy!
 
 .image img/GOPHER_MIC_DROP.png 500 _
