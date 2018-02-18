@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// START OMIT
-	in := []byte(`{"date": 630655260}`)
+	in := []byte(`{"date": "abc"}`)
 	// END OMIT
 	var t timeutils.Timestamp
 	if err := json.Unmarshal(in, &t); err != nil { // HL
