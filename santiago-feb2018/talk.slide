@@ -47,6 +47,10 @@ Caso mezclado
 
 .code -edit timestamp/timeutils/timestamp.go /START/,/END/
 
+* Approxidate - Linus Torvalds, 2005
+
+.code timestamp/timeutils/parse.go
+
 * Examples
 
 RFC3339
