@@ -62,6 +62,9 @@ RFC1123
 Unix timestamp
 .play -edit timestamp/UnixTimestamp.go /START/,/END/
 
+Unix timestamp as string
+.play -edit timestamp/UnixTimestampString.go /START/,/END/
+
 Invalid
 .play -edit timestamp/invalid.go /START/,/END/
 
