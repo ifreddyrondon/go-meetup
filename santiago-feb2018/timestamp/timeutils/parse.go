@@ -18,6 +18,5 @@ func ParseDateString(dt string) (time.Time, error) {
 	if int(ok) != 0 {
 		return time.Time{}, fmt.Errorf("Invlid Date Format %s", dt)
 	}
-
 	return time.Unix(int64(date.tv_sec), int64(date.tv_usec)*1000), nil
 }

@@ -56,6 +56,8 @@ Mixed
 
 .code timestamp/timeutils/parse.go
 
+.caption https://github.com/simplereach/timeutils
+
 * Examples
 
 RFC3339
