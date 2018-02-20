@@ -9,7 +9,7 @@ ifreddyrondon@gmail.com
 https://github.com/ifreddyrondon/
 @ifreddyrondon
 
-* Primeros pasos
+* First steps
 
 .image img/first-steps.jpg
 
@@ -26,28 +26,33 @@ NewDecoder
 Struct
 .play -edit firststeps/point.go /START/,/END/
 
-¿Cómo podríamos soportar *latitude* y *longitude* en conjunto con *lat* y *lng*?
+* How could we support latitude and longitude along with lat and lng?
+.image img/thinker.jpeg
 
-* Unmarshal
+* Implementing Unmarshal
 
 .code -edit structs/point/point.go /START/,/END/
 
-* Unmarshal
+* Examples
 
-Caso base
+Short case
 .play -edit structs/point_lat_lng.go /START/,/END/
 
-Caso latitude y longitude
+Long case
 .play -edit structs/point_latitude_longitude.go /START/,/END/
 
-Caso mezclado
+Mixed
 .play -edit structs/point_lat_longitude.go /START/,/END/
 
-* Working with dates
+* Dates
+
+.background img/time_travel.png
+
+* Timestamp
 
 .code -edit timestamp/timeutils/timestamp.go /START/,/END/
 
-* Approxidate - Linus Torvalds, 2005
+* Approxidate.h - Linus Torvalds 🤵
 
 .code timestamp/timeutils/parse.go
 
@@ -67,6 +72,10 @@ Unix timestamp as string
 
 Invalid
 .play -edit timestamp/invalid.go /START/,/END/
+
+* All that glisters is not gold 😞
+
+
 
 * Enjoy!
 
