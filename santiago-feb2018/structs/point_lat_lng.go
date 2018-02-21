@@ -15,6 +15,11 @@ func main() {
 	if err := json.Unmarshal(in, &p); err != nil { // HL
 		panic(err)
 	}
-	fmt.Println(p)
 	// END OMIT
+	// pretty print
+	response, err := json.MarshalIndent(p, "", "  ")
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	fmt.Println(string(response))
 }

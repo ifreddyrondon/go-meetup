@@ -18,6 +18,11 @@ func main() {
 	if err := json.Unmarshal(in, &point); err != nil { // HL
 		panic(err)
 	}
-	fmt.Println(point)
 	// END OMIT
+	// pretty print
+	response, err := json.MarshalIndent(point, "", "  ")
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	fmt.Println(string(response))
 }

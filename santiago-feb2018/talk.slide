@@ -77,7 +77,38 @@ Invalid
 
 * All that glisters is not gold 😞
 
+* Grouping
 
+Points and timestamps
+
+    type Capture struct {
+    	Point     point.Point
+    	Timestamp timeutils.Timestamp
+    }
+
+Gathering captures
+
+    type Captures []Capture
+
+What happens if we want to *concurrently* process each capture within the slice? 🤔
+
+    func (p *Captures) UnmarshalJSON(data []byte) error {
+
+    }
+
+*BUT* 🙃
+
+* Before 😕
+
+.code captures/capture/capture.go /START/,/END/
+
+* Now 😎
+
+.code captures/capture/unmarshal.go /START/,/END/
+
+* Examples
+
+.play captures/example.go /START/,/END/
 
 * Enjoy!
 

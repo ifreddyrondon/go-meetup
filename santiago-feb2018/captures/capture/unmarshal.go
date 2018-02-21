@@ -6,6 +6,8 @@ import (
 	"sync"
 )
 
+const WorkersNumber = 4
+
 type indexCapture struct {
 	index int
 	*Capture
@@ -26,17 +28,16 @@ func worker(wg *sync.WaitGroup, jobs <-chan job, results chan<- indexCapture) {
 	}
 }
 
+// START OMIT
 func (p *Captures) UnmarshalJSON(data []byte) error {
 	var raw []json.RawMessage
 	if err := json.Unmarshal(data, &raw); err != nil {
 		panic(err)
 	}
-
 	var wg sync.WaitGroup
 	wg.Add(len(raw))
 	jobs := make(chan job, len(raw))
 	results := make(chan indexCapture, len(raw))
-
 	for w := 0; w < WorkersNumber; w++ {
 		go worker(&wg, jobs, results)
 	}
@@ -46,7 +47,8 @@ func (p *Captures) UnmarshalJSON(data []byte) error {
 	close(jobs)
 	wg.Wait()
 	close(results)
-
+	// ...
+	// END OMIT
 	processed := make([]indexCapture, 0, len(results))
 	for data := range results {
 		processed = append(processed, data)
@@ -57,6 +59,5 @@ func (p *Captures) UnmarshalJSON(data []byte) error {
 	for _, v := range processed {
 		*p = append(*p, *v.Capture)
 	}
-
 	return nil
 }

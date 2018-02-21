@@ -15,5 +15,10 @@ func main() {
 	if err := json.Unmarshal(in, &p); err != nil {
 		panic(err)
 	}
-	fmt.Println(p)
+	// pretty print
+	response, err := json.MarshalIndent(p, "", "  ")
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	fmt.Println(string(response))
 }
