@@ -11,7 +11,7 @@ https://github.com/ifreddyrondon/
 
 * First steps
 
-.image img/first-steps.jpg
+.image img/first-steps.gif _ 600
 
 * Hello world
 
@@ -27,7 +27,7 @@ Struct
 .play -edit firststeps/point.go /START/,/END/
 
 * How could we support latitude and longitude along with lat and lng?
-.image img/thinker.jpeg
+.image img/thinker.jpeg _ 800
 
 * Implementing Unmarshal
 
@@ -44,9 +44,9 @@ Long case
 Mixed
 .play -edit structs/point_lat_longitude.go /START/,/END/
 
-* Dates
+* Working with dates
 
-.background img/time_travel.png
+.image img/time_travel.png _ 950
 
 * Timestamp
 
