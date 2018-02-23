@@ -108,7 +108,7 @@ What happens if we want to *concurrently* process each capture within the slice?
 
 * Examples
 
-.play captures/example.go /START/,/END/
+.play -edit captures/example.go /START/,/END/
 
 * Enjoy!
 
